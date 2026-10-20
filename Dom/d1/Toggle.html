@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show Hide</title>
+  </head>
+  <body>
+    <button id="toggleBtn">Toggle Text</button>
+    <p id="text">Hello World</p>
+    <script>
+      const btn = document.getElementById("toggleBtn");
+      const p = document.getElementById("text");
+      btn.addEventListener("click", function () {
+        if (p.style.display === "none") {
+          p.style.display = "block";
+        } else {
+          p.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
