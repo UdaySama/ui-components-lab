@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <input type="number" id="num1" />
+    <input type="number" id="num2" />
+    <button id="calcBtn">Add</button>
+    <h3 id="result">Result:-</h3>
+
+    <script>
+      const n1 = document.getElementById("num1");
+      const n2 = document.getElementById("num1");
+      const btn = document.getElementById("calcBtn");
+      const res = document.getElementById("result");
+      btn.addEventListener("click", function () {
+        let sum = Number(n1.value) + Number(n2.value);
+        res.textContent = "Result:- " + sum;
+      });
+    </script>
+  </body>
+</html>
