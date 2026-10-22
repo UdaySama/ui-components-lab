@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms Checkbox</title>
+</head>
+<body>
+    <input type="checkbox" id="terms"> I agree</input>
+    <button id="submitBtn" disabled>Submit</button>
+
+    <script>
+        const checkbox = document.getElementById('terms')
+        const btn = document.getElementById('submitBtn')
+        checkbox.addEventListener('change',function(){
+            btn.disabled = !checkbox.checked;
+        })
+        
+        
+    </script>
+</body>
+</html>
