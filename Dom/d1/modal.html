@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+  </head>
+  <body>
+    <button id="openBtn">Open Modal</button>
+    <div id="myModal" style="display: none">
+      <p>This is a modal box</p>
+      <button id="closebtn">Close</button>
+    </div>
+    <script>
+      const openBtn = document.getElementById("openBtn");
+      const closeBtn = document.getElementById("closebtn");
+      const modal = document.getElementById("myModal");
+
+      openBtn.addEventListener("click", function () {
+        modal.style.display = "block";
+      });
+
+      closeBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
