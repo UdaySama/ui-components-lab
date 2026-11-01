@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+</head>
+<body>
+    <h2 id="timer">10</h2>
+    <button onclick="startCountdown()">
+        start Countdown
+    </button>
+    <script>
+        let count = 10;
+        let timer;
+        function startCountdown(){
+            clearInterval(timer);
+            count = 10;
+            document.getElementById('timer').textContent = count;
+            timer = setInterval(function(){
+                count--;
+                if(count <=0){
+                    clearInterval(timer);
+                    document.getElementById('timer').textContent= 'Time up!';
+                }else{
+                    document.getElementById('timer').textContent = count
+                }
+            },1000)
+        }
+    </script>
+</body>
+</html>
