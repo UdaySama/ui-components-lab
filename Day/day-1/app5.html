@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress Bar</title>
+    <style>
+      #box {
+        width: 300px;
+        height: 30px;
+        border: 1px solid black;
+      }
+      #fill {
+        width: 0px;
+        height: 30px;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"><div id="fill"></div></div>
+    <p id="status">0%</p>
+    <button onclick="loadProgress()">Start Loading</button>
+    <script>
+      let progress = 0;
+
+      function loadProgress() {
+        progress = 0;
+        step();
+      }
+      function step() {
+        if (progress <= 100) {
+          document.getElementById("fill").style.width = progress + "%";
+          document.getElementById("status").textContent = progress + "%";
+          progress += 10;
+          setTimeout(step, 300);
+        }
+      }
+    </script>
+  </body>
+</html>
