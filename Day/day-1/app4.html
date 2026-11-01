@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Switcher</title>
+  </head>
+  <body>
+    <button onclick="startColors()">Start Colors</button>
+
+    <button onclick="stopColors()">Stop Color</button>
+    <script>
+      let colors = ["red", "blue", "green", "yellow", "purple"];
+      let index = 0;
+      let intervalId;
+      function changeColor() {
+        if (index >= colors.length) {
+          index = 0;
+        } else if (index < 0) {
+          index = 0;
+        }
+        document.body.style.backgroundColor = colors[index];
+        index++;
+      }
+      function startColors() {
+        if (!intervalId) {
+          intervalId = setInterval(changeColor, 100);
+        }
+      }
+      function stopColors() {
+        clearInterval(intervalId);
+        intervalId = null;
+      }
+    </script>
+  </body>
+</html>
