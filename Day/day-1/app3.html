@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delayed FizzBuzz</title>
+  </head>
+  <body>
+    <ul id="list"></ul>
+    <script>
+      let num = 1;
+      function printNext() {
+        if (num <= 5000) {
+          let li = document.createElement("li");
+          if (num % 3 === 0 && num % 5 === 0) {
+            li.textContent = "FizzBuzz";
+          } else if (num % 3 === 0) {
+            li.textContent = "Fizz";
+          } else if (num % 5 === 0) {
+            li.textContent = "Bizz";
+          } else {
+            li.textContent = num;
+          }
+          document.getElementById("list").appendChild(li);
+          num++;
+          setTimeout(printNext, 500);
+        }
+      }
+      printNext()
+    </script>
+  </body>
+</html>
