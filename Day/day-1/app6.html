@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop Scope Fix</title>
+  </head>
+  <body>
+    <div id="output"></div>
+    <script>
+      for (let i = 1; i <= 5; i++) {
+        setTimeout(function () {
+          let p = document.createElement("p");
+          if (i % 2 === 0) {
+            p.textContent = "Even Step:- " + i;
+          } else {
+            p.textContent = "Odd Step:- " + i;
+          }
+          document.getElementById("output").appendChild(p);
+        }, i * 1000);
+      }
+    </script>
+  </body>
+</html>
