@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+  </head>
+  <body>
+    <h1 id="counter">0</h1>
+    <button id="increment">Plus</button>
+    <button id="reset">Plus</button>
+    <button id="decrement">Plus</button>
+
+    <script>
+      let count = 0;
+      const counterEle = document.getElementById("counter");
+      const increment = document.getElementById("increment");
+      const reset = document.getElementById("reset");
+      const decrement = document.getElementById("decrement");
+      increment.addEventListener("click", () => {
+        count++;
+        counterEle.textContent = count;
+      });
+      reset.addEventListener("click", () => {
+        count = 0;
+        counterEle.textContent = count;
+      });
+      decrement.addEventListener("click", () => {
+        count--;
+        counterEle.textContent = count;
+      });
+    </script>
+  </body>
+</html>
