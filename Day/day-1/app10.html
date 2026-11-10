@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count characters in input</title>
+  </head>
+  <body>
+    <input type="text" id="txt" />
+    <p id="count">0</p>
+    <script>
+      const text = document.getElementById("txt");
+      const count = document.getElementById("count");
+
+      text.addEventListener("input", () => {
+        count.textContent = text.value.length;
+      });
+    </script>
+  </body>
+</html>
