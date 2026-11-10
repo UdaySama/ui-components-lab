@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display input value</title>
+  </head>
+  <body>
+    <input type="text" id="userName" />
+    <button id="btn">post</button>
+    <p id="result"></p>
+    <script>
+      const userName = document.getElementById("userName");
+      const result = document.getElementById("result");
+      const btn = document.getElementById("btn");
+      btn.addEventListener("click", () => {
+        result.textContent = userName.value;
+      });
+    </script>
+  </body>
+</html>
