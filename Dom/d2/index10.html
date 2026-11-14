@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change text color on mouseover</title>
+  </head>
+  <body>
+    <h2 id="heading">Hover over me</h2>
+    <script>
+      const heading = document.getElementById("heading");
+      heading.addEventListener("mouseover", () => {
+        heading.style.color = "red";
+      });
+
+      heading.addEventListener('mouseout',()=>{
+        heading.style.color = 'black'
+      })
+    </script>
+  </body>
+</html>
