@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete an item from a list</title>
+  </head>
+  <body>
+    <ul id="list">
+      <li>HTML <button class="delete">Del</button></li>
+      <li>Javascript <button class="delete">Del</button></li>
+      <li>Python <button class="delete">Del</button></li>
+    </ul>
+    <script>
+      const buttons = document.querySelectorAll(".delete");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          btn.parentElement.remove();
+        });
+      });
+    </script>
+  </body>
+</html>
