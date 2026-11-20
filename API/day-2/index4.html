@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count Vowels in Input String</title>
+  </head>
+  <body>
+    <input type="text" id="vowInput" />
+    <button id="vowBtn">Count Vowels</button>
+    <p id="result"></p>
+    <script>
+      document.getElementById("vowBtn").addEventListener("click", () => {
+        const str = document.getElementById("vowInput").value.toLowerCase();
+        const count = str.split("").filter((ch) => "aeiou".includes(ch)).length;
+        document.getElementById("result").textContent = `Vowels:- ${count}`;
+      });
+    </script>
+  </body>
+</html>
