@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove Duplicate Characters from String</title>
+  </head>
+  <body>
+    <input type="text" id="duplicate" />
+    <button id="btn">Duplicate</button>
+    <p id="result"></p>
+    <script>
+      document.getElementById("btn").addEventListener("click", () => {
+        const char = document.getElementById("duplicate").value.split("");
+        const unique = [...new Set(char)].join("");
+        document.getElementById("result").textContent = unique;
+      });
+    </script>
+  </body>
+</html>
