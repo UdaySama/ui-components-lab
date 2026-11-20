@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Button with Hover Styling</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      const btn = document.createElement("button");
+      btn.textContent = "click Me";
+      btn.style.padding = "10px 18px";
+      btn.style.backgroundColor = "red";
+      btn.style.color = "white";
+      btn.style.border = "none";
+      btn.style.borderRadius = "6px";
+      btn.style.cursor = "pointer";
+      btn.addEventListener(
+        "mouseenter",
+        () => (btn.style.backgroundColor = "#1d4ed8"),
+      );
+      btn.addEventListener(
+        "mouseleave",
+        () => (btn.style.backgroundColor = "#red"),
+      );
+      document.getElementById("app").appendChild(btn);
+    </script>
+  </body>
+</html>
